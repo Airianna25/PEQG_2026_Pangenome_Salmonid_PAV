@@ -12,6 +12,13 @@ If you want to do this on your own data you would need:
 2. Assemblies for each (.fasta)
 3. A database created from the protiens (.dmnd) which I'll describe how to create
 
+
+## A Note Before You Start on Annotation ##
+
+In comparative studies, annotation quality is imperative. Before the below analysis, all genomes were re-annotated with the same verison of EGAPx. It is known that re-annotation with the same tool often resolves issues in detecting PAV that would arise if one were to use annotations generated across different tools / pipelines. Consistent methodology during annotation is known to decrease the incidence of detcting false PAVs specifically (Bruna et al. 2026). See this paper for more information: https://academic.oup.com/nargab/article/8/1/lqag011/8445264
+
+As mentioned, all assemblies used here were re-annotated with EGAPx, the public verison of NCIB's Eukaryotic Genome Annotation Pipeline (https://github.com/ncbi/egapx). This has been performing well for vertebrates in our lab, if you are annotating plant genomes, take a look at EASEL (Efficient, Accurate, Scalable Eukaryotic modeLs) which was developed by Cynthia Webster in Dr. Jill Wegrzyn's lab at the University of Connecticut: https://gitlab.com/PlantGenomicsLab/easel. 
+
 ### Input data ###
 
 I have uploaded all the protien files, and assemblies here for use. Here are the species (I have one assembly and annotation for each):
