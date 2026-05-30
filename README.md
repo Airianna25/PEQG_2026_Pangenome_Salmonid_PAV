@@ -3,8 +3,12 @@ This is a quick tutorial on finding gene presence absence variants (PAV) in fami
 
 ## Introduction ##
 
-This is one approach you can take to find putative gene PAVs. The first step is a quick BLAST/diamond run to understand sequence similarity, and then a protien to genome alignment (miniprot) to check if genes with low sequence similarity might exist in your other genomes. In my study, I am focused on finding gene PAVs in salmonids, particularly those that might exist in one genus (Thymallus) for which I have three assemblies, compared to other salmonids. Salmonids are a family of both anadromous and non-anadromous fishes.
+Salmonids are a highly diverse group of long-lived, coldwater fishes with divergence times of up to 100 mya. This family shares a salmonid specific whole genome duplication event (termed the Ss4R) that occured ~88-100 mya). Species in this lineage are in various stages of rediploidization, meaning some parts of their genome are still partially tetraploid. In my study, I am focused on finding gene PAVs, particularly those that might exist in one genus (Thymallus) for which I have three assemblies, compared to 11 other species of salmonids. My specific questions included:
 
+1. What gene PAVs do graylings possess (Arctic grayling, Amur grayling, european grayling) in comparison to a subset of the salmonid family?
+2. What might these PAVs tell us about their unique life history strategies, or the unique environments they inhabit?
+
+Most pangenome tools (Minigraph cactus, PGGB, PanTools) are designed for constructing pangenomes either witin species, or genus. While progressive cactus is designed for more broad comparisons (potentially at the family level) extensive divergence and distance can across individuals included in the pangenome can lead to issues during the alignment stage. To approach this, I took a gene family based approach followed by further alignment methods for PAV identfication. This involves a quick BLAST/diamond run to understand sequence similarity, and then a protien to genome alignment (miniprot) to check if genes with low sequence similarity might exist in your other genomes. 
 
 If you want to do this on your own data you would need:
 
@@ -13,11 +17,13 @@ If you want to do this on your own data you would need:
 3. A database created from the protiens (.dmnd) which I'll describe how to create
 
 
-## A Note Before You Start on Annotation ##
+## A Note Before You Start on Annotation and Assembly Quality ##
 
 In comparative studies, annotation quality is imperative. Before the below analysis, all genomes were re-annotated with the same verison of EGAPx. EGAPx provided structural annotations, and I used EnTAP for functional annotations (https://entap.readthedocs.io/en/latest/). It is known that re-annotation with the same tool often resolves issues in detecting PAV that would arise if one were to use annotations generated across different tools / pipelines. Consistent methodology during annotation is known to decrease the incidence of detcting false PAVs specifically (Bruna et al. 2026). See this paper for more information: https://academic.oup.com/nargab/article/8/1/lqag011/8445264
 
 As mentioned, all assemblies used here were re-annotated with EGAPx, the public verison of NCIB's Eukaryotic Genome Annotation Pipeline (https://github.com/ncbi/egapx). This has been performing well for vertebrates in our lab, if you are annotating plant genomes, take a look at EASEL (Efficient, Accurate, Scalable Eukaryotic modeLs) which was developed by Cynthia Webster in Dr. Jill Wegrzyn's lab at the University of Connecticut: https://gitlab.com/PlantGenomicsLab/easel. 
+
+
 
 ### Input data ###
 
@@ -198,6 +204,7 @@ What we see, is that we have very high quality alignmnets to the arctic grayling
 
 Now you have identified a potential PAV!
 
+## Caveats ##
 
 
 
