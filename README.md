@@ -1,4 +1,4 @@
-# PEQG_2026_Pangenome_Salmonid_PAV
+# PEQG 2026 Pangenome_Salmonid PAV Tutorial
 This is a quick tutorial on finding gene presence absence variants (PAV) in family level analysis with alignment methods (BLAST and miniprot). 
 
 ## Introduction ##
@@ -87,7 +87,7 @@ diamond blastp \
     --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue
 ```
 
-![blast results]()
+![blast results](grayling_blast_results.png)
 
 We now have our sequence similarity results. We will compare all the grayling genes that went into the search, with the BLAST results to _find genes that did not align whatsoever_. 
 
@@ -156,7 +156,7 @@ cat *gff > all_species_miniprot_hits.gff
 ```
 Here is what it looks like:
 
-![miniprot results]()
+![miniprot results](miniprot_results.png)
 
 From left to right, the first column where the hit was identified, the location of the alignment, the percent identity, and the gene ID that aligned.
 
@@ -175,7 +175,7 @@ awk -F'\t' '$3=="mRNA" {
 
 Results:
 
-![lowest_alns]()
+![lowest_alns](lowest_alns.png)
 
 There are 20 candidates here. As a sanity check, we can grep these IDs and make sure the alignments are all low percent identity in all non-grayling salmonids. Since we have a GFF for each we can check. This one ```egapxtmp_007423-R1_arctic_grayling```  is low across the board after independently checking each species GFF.
 
@@ -185,7 +185,7 @@ Lets just test that ID for now:
 grep "egapxtmp_034625-R1_arctic_grayling" *.gff > check_all_species_test_candidate.gff
 
 ```
-link to file so they can see it...
+[Checking results output] (check_all_alns.gff)
 
 What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout and coho salmon, we see an alignment rate of ~45, but no alignments whatsoever to other species.
 
