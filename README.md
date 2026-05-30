@@ -182,12 +182,12 @@ There are 20 candidates here. As a sanity check, we can grep these IDs and make 
 Lets just test that ID for now:
 
 ```
-grep "egapxtmp_034625-R1_arctic_grayling" *.gff > check_all_species_test_candidate.gff
+grep "egapxtmp_007423-R1_arctic_grayling" *.gff > check_all_species_test_candidate.gff
 
 ```
-[Checking results output] (check_all_alns.gff)
+[Checking results output] (https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/check_all_alns.gff)
 
-What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout and coho salmon, we see an alignment rate of ~45, but no alignments whatsoever to other species.
+What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout, cut-throat, cogo, and chum salmon, we see an alignment rate of ~17, but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
 
 Now you have identified a potential PAV!
 
