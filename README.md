@@ -175,7 +175,7 @@ awk -F'\t' '$3=="mRNA" {
 
 Results:
 
-![lowest_alns]
+![lowest_alns]()
 
 There are 20 candidates here. As a sanity check, we can grep these IDs and make sure the alignments are all low percent identity in all non-grayling salmonids. Since we have a GFF for each we can check. This one ```egapxtmp_007423-R1_arctic_grayling```  is low across the board after independently checking each species GFF.
 
