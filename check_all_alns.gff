@@ -1,0 +1,48 @@
+amur_grayling_pav_validation.gff:##PAF	egapxtmp_034625-R1_arctic_grayling	291	0	291	-	chr4	43812173	8774352	8777445	861	873	0	AS:i:1282	ms:i:1483	np:i:289	da:i:0	do:i:87	cg:Z:30M329U17M285N23M477U19M379U90M172N64M590V44M	cs:Z::20*tgcR:9*gD~gt326ag-at:17~gt285ag:23*gA~gt474ag-ct:19*gE~gt376ag-aa:74*atcV:6*acaI:8~gt172ag:64*ctL~gt587ag-g:7*actS:36
+amur_grayling_pav_validation.gff:chr4	miniprot	mRNA	8774353	8777445	1483	-	.	ID=MP000001;Rank=1;Identity=0.9863;Positive=0.9931;StopCodon=1;Target=egapxtmp_034625-R1_arctic_grayling 1 291
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8777355	8777445	150	-	0	Parent=MP000001;Rank=1;Identity=0.9677;Target=egapxtmp_034625-R1_arctic_grayling 1 30
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8776976	8777028	92	-	2	Parent=MP000001;Rank=1;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 31 48
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8776621	8776690	142	-	0	Parent=MP000001;Rank=1;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 49 71
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8776087	8776146	100	-	2	Parent=MP000001;Rank=1;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 72 91
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8775439	8775710	456	-	2	Parent=MP000001;Rank=1;Identity=0.9778;Target=egapxtmp_034625-R1_arctic_grayling 92 182
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8775073	8775266	329	-	0	Parent=MP000001;Rank=1;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 183 246
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8774353	8774485	214	-	1	Parent=MP000001;Rank=1;Identity=0.9773;StopCodon=1;Target=egapxtmp_034625-R1_arctic_grayling 247 291
+amur_grayling_pav_validation.gff:##PAF	egapxtmp_034625-R1_arctic_grayling	291	0	291	+	chr4	43812173	8935765	8938854	861	873	0	AS:i:1276	ms:i:1477	np:i:288	da:i:0	do:i:87	cg:Z:30M329U17M285N23M481U19M379U90M172N64M582V44M	cs:Z::20*tgcR:9*gD~gt326ag-at:5*gtaG:11~gt285ag:23*gA~gt478ag-ct:19*gE~gt376ag-aa:74*atcV:6*acaI:8~gt172ag:64*ctL~gt579ag-g:44
+amur_grayling_pav_validation.gff:chr4	miniprot	mRNA	8935766	8938854	1477	+	.	ID=MP000002;Rank=2;Identity=0.9863;Positive=0.9897;StopCodon=1;Target=egapxtmp_034625-R1_arctic_grayling 1 291
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8935766	8935856	150	+	0	Parent=MP000002;Rank=2;Identity=0.9677;Target=egapxtmp_034625-R1_arctic_grayling 1 30
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8936183	8936235	83	+	2	Parent=MP000002;Rank=2;Identity=0.9412;Target=egapxtmp_034625-R1_arctic_grayling 31 48
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8936521	8936590	142	+	0	Parent=MP000002;Rank=2;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 49 71
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8937069	8937128	100	+	2	Parent=MP000002;Rank=2;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 72 91
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8937505	8937776	456	+	2	Parent=MP000002;Rank=2;Identity=0.9778;Target=egapxtmp_034625-R1_arctic_grayling 92 182
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8937949	8938142	329	+	0	Parent=MP000002;Rank=2;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 183 246
+amur_grayling_pav_validation.gff:chr4	miniprot	CDS	8938722	8938854	217	+	1	Parent=MP000002;Rank=2;Identity=1.0000;StopCodon=1;Target=egapxtmp_034625-R1_arctic_grayling 247 291
+amur_grayling_pav_validation.gff:##PAF	egapxtmp_034625-R1_arctic_grayling	291	0	291	-	chr35	47492427	16613681	16616552	861	873	0	AS:i:1274	ms:i:1475	np:i:287	da:i:0	do:i:87	cg:Z:30M331U17M285N23M251U19M381U90M172N64M590V44M	cs:Z::20*tgcR:9*gD~gt328ag-at:17~gt285ag:23*gA~gt248ag-ct:19*gE~gt378ag-aa:46*ggaE:34*acaI:8~gt172ag:64*ctL~gt587ag-g:24*cacR:19
+amur_grayling_pav_validation.gff:chr35	miniprot	mRNA	16613682	16616552	1475	-	.	ID=MP000003;Rank=3;Identity=0.9863;Positive=0.9863;StopCodon=1;Target=egapxtmp_034625-R1_arctic_grayling 1 291
+amur_grayling_pav_validation.gff:chr35	miniprot	CDS	16616462	16616552	150	-	0	Parent=MP000003;Rank=3;Identity=0.9677;Target=egapxtmp_034625-R1_arctic_grayling 1 30
+amur_grayling_pav_validation.gff:chr35	miniprot	CDS	16616081	16616133	92	-	2	Parent=MP000003;Rank=3;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 31 48
+amur_grayling_pav_validation.gff:chr35	miniprot	CDS	16615726	16615795	142	-	0	Parent=MP000003;Rank=3;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 49 71
+amur_grayling_pav_validation.gff:chr35	miniprot	CDS	16615418	16615477	100	-	2	Parent=MP000003;Rank=3;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 72 91
+amur_grayling_pav_validation.gff:chr35	miniprot	CDS	16614768	16615039	450	-	2	Parent=MP000003;Rank=3;Identity=0.9778;Target=egapxtmp_034625-R1_arctic_grayling 92 182
+amur_grayling_pav_validation.gff:chr35	miniprot	CDS	16614402	16614595	329	-	0	Parent=MP000003;Rank=3;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 183 246
+amur_grayling_pav_validation.gff:chr35	miniprot	CDS	16613682	16613814	212	-	1	Parent=MP000003;Rank=3;Identity=0.9773;StopCodon=1;Target=egapxtmp_034625-R1_arctic_grayling 247 291
+amur_grayling_pav_validation.gff:##PAF	egapxtmp_034625-R1_arctic_grayling	291	0	291	-	chr32	51701102	35275928	35279045	861	873	0	AS:i:1274	ms:i:1475	np:i:287	da:i:0	do:i:87	cg:Z:30M331U17M285N23M497U19M381U90M172N64M590V44M	cs:Z::20*tgcR:9*gD~gt328ag-at:17~gt285ag:23*gA~gt494ag-ct:19*gE~gt378ag-aa:46*ggaE:34*acaI:8~gt172ag:64*ctL~gt587ag-g:24*cacR:19
+amur_grayling_pav_validation.gff:chr32	miniprot	mRNA	35275929	35279045	1475	-	.	ID=MP000004;Rank=4;Identity=0.9863;Positive=0.9863;StopCodon=1;Target=egapxtmp_034625-R1_arctic_grayling 1 291
+amur_grayling_pav_validation.gff:chr32	miniprot	CDS	35278955	35279045	150	-	0	Parent=MP000004;Rank=4;Identity=0.9677;Target=egapxtmp_034625-R1_arctic_grayling 1 30
+amur_grayling_pav_validation.gff:chr32	miniprot	CDS	35278574	35278626	92	-	2	Parent=MP000004;Rank=4;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 31 48
+amur_grayling_pav_validation.gff:chr32	miniprot	CDS	35278219	35278288	142	-	0	Parent=MP000004;Rank=4;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 49 71
+amur_grayling_pav_validation.gff:chr32	miniprot	CDS	35277665	35277724	100	-	2	Parent=MP000004;Rank=4;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 72 91
+amur_grayling_pav_validation.gff:chr32	miniprot	CDS	35277015	35277286	450	-	2	Parent=MP000004;Rank=4;Identity=0.9778;Target=egapxtmp_034625-R1_arctic_grayling 92 182
+amur_grayling_pav_validation.gff:chr32	miniprot	CDS	35276649	35276842	329	-	0	Parent=MP000004;Rank=4;Identity=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 183 246
+amur_grayling_pav_validation.gff:chr32	miniprot	CDS	35275929	35276061	212	-	1	Parent=MP000004;Rank=4;Identity=0.9773;StopCodon=1;Target=egapxtmp_034625-R1_arctic_grayling 247 291
+chinook_salmon_pav_validation.gff:##PAF	egapxtmp_034625-R1_arctic_grayling	291	17	35	+	chr30	52926507	20308883	20308937	24	54	0	AS:i:44	ms:i:44	np:i:14	da:i:33	do:i:18	cg:Z:18M	cs:Z::1*atgR*ttgM*gctR*gtaL*caaA*gaaS:3*gaaQ:2*aacD*aagR:1*agaK:1
+chinook_salmon_pav_validation.gff:chr30	miniprot	mRNA	20308884	20308937	44	+	.	ID=MP000001;Rank=1;Identity=0.4444;Positive=0.7778;Target=egapxtmp_034625-R1_arctic_grayling 18 35
+chinook_salmon_pav_validation.gff:chr30	miniprot	CDS	20308884	20308937	44	+	0	Parent=MP000001;Rank=1;Identity=0.4444;Target=egapxtmp_034625-R1_arctic_grayling 18 35
+coho_salmon_pav_validation.gff:##PAF	egapxtmp_034625-R1_arctic_grayling	291	169	183	+	chr21	47277920	3532990	3533032	18	42	0	AS:i:40	ms:i:40	np:i:13	da:i:-1	do:i:120	cg:Z:14M	cs:Z:*aaaE*agtN*aaaM:3*cttM:1*aaaR*ttgM:2*aaaR*atcV
+coho_salmon_pav_validation.gff:chr21	miniprot	mRNA	3532991	3533032	40	+	.	ID=MP000001;Rank=1;Identity=0.4286;Positive=0.9286;Target=egapxtmp_034625-R1_arctic_grayling 170 183
+coho_salmon_pav_validation.gff:chr21	miniprot	CDS	3532991	3533032	40	+	0	Parent=MP000001;Rank=1;Identity=0.4286;Target=egapxtmp_034625-R1_arctic_grayling 170 183
+coho_salmon_pav_validation.gff:##PAF	egapxtmp_034625-R1_arctic_grayling	291	169	180	+	chr10	68916532	35750246	35750279	15	33	0	AS:i:31	ms:i:40	np:i:11	da:i:27	do:i:18	cg:Z:11M	cs:Z::2*ttgM:1*gtcI:1*ctaM:1*aagR*cttM*atgL
+coho_salmon_pav_validation.gff:chr10	miniprot	mRNA	35750247	35750279	40	+	.	ID=MP000002;Rank=2;Identity=0.4545;Positive=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 170 180
+coho_salmon_pav_validation.gff:chr10	miniprot	CDS	35750247	35750279	40	+	0	Parent=MP000002;Rank=2;Identity=0.4545;Target=egapxtmp_034625-R1_arctic_grayling 170 180
+rainbow_trout_grayling_pav_validation.gff:##PAF	egapxtmp_034625-R1_arctic_grayling	291	246	257	+	chr23	62880378	2243698	2243731	15	33	0	AS:i:27	ms:i:33	np:i:11	da:i:-1	do:i:48	cg:Z:11M	cs:Z::1*aaaR*acaS*gtcI*caaE:1*ttgM:2*gacN:1
+rainbow_trout_grayling_pav_validation.gff:chr23	miniprot	mRNA	2243699	2243731	33	+	.	ID=MP000001;Rank=1;Identity=0.4545;Positive=1.0000;Target=egapxtmp_034625-R1_arctic_grayling 247 257
+rainbow_trout_grayling_pav_validation.gff:chr23	miniprot	CDS	2243699	2243731	33	+	0	Parent=MP000001;Rank=1;Identity=0.4545;Target=egapxtmp_034625-R1_arctic_grayling 247 257
