@@ -227,7 +227,7 @@ This is putatively annotated as a lipid binding gene. However, it doesn't have a
 
 ![annotation_results](https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/annotation_results.png)
 
-### Step 4: Further Validatio n###
+### Step 4: Further Validation ###
 
 1. Reciprocal blast
 2. OrthoFinder group membership
@@ -236,7 +236,7 @@ This is putatively annotated as a lipid binding gene. However, it doesn't have a
 
 ### Step 5: Further analysis with identified PAVs ###
 
-### Power of this approach compared to other methods ###
+## Power of this approach compared to other methods ##
 
 The use of BLAST, reciprocal blast searches, protien to genome alignment, OrthoFinder, and synteny in combination with eachother will all provide further support for PAVs. This is a pseudo-pangenome approach for species with a wide evolutionary distance, that might not work well with typical pangenome tools. Ideally, these analyses should be used together to validate candidates in the absence of a typical pangenome
 graph. BLAST and protien to genome alignment will give you information about sequence similarity and potentially diverged copies that could look like PAV at a glance, while following up with OrthoFinder will give insight into orthologous and paralogous relationships. Looking at the syntney of these PAV regions across your genomes can provide resolution on potential translocation events, gaps, relationships of orthologous regions, all which can interfere with intepretation of PAVs. 
