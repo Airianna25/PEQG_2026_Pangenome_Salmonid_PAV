@@ -14,7 +14,7 @@ If you want to do this on your own data you would need:
 
 1. Protien files (.faa, .pep) for all of your indviduals - generated from annotation
 2. Assemblies for each (.fasta)
-3. A database created from the protiens (.dmnd) [Database Creation ](#Assess Sequence Similarity)
+3. A database created from the protiens (.dmnd) [Database Creation ](#assess-sequence-similarity)
 4. An OrthoFinder run
 5. A functional annotation 
 
