@@ -225,7 +225,7 @@ grep "egapxtmp_007423-R1_arctic_grayling" > ag_entap_results.tsv
 
 This is putatively annotated as a lipid binding gene. However, it doesn't have any GO terms associated and the annotation is quite broad, just from Eukaryota and no further classifications. 
 
-![lowest_alns](lannotation_results.png)
+![annotation_results](https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/annotation_results.png)
 
 ### Step 4: Further Validation###
 
