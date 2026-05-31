@@ -33,7 +33,7 @@ Before I searched for PAVs I:
 
 1. Ran Orthofinder to evaluate OrthoFinder to identify both orthologs and paralogs (https://link.springer.com/article/10.1186/s13059-019-1832-y)
 
-Before OrthoFinder and PAV analysis, the longest isoform was obtained for each gene. This means there is 1 representive protien for each gene in the analysis. See this script: SCRIPT HERE for extracting this from your protein files. 
+Before OrthoFinder and PAV analysis, the longest isoform was obtained for each gene. This means there is 1 representive protien for each gene in the analysis. See this script: https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/pull_longest_isoform.sh 
 
 2. Functionally annotated all genomes to understand gene functions 
 
