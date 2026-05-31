@@ -23,6 +23,7 @@ In comparative studies, annotation quality is imperative. Before the below analy
 
 As mentioned, all assemblies used here were re-annotated with EGAPx, the public verison of NCIB's Eukaryotic Genome Annotation Pipeline (https://github.com/ncbi/egapx). This has been performing well for vertebrates in our lab, if you are annotating plant genomes, take a look at EASEL (Efficient, Accurate, Scalable Eukaryotic modeLs) which was developed by Cynthia Webster in Dr. Jill Wegrzyn's lab at the University of Connecticut: https://gitlab.com/PlantGenomicsLab/easel. 
 
+Further, ensure you are using as high-quality genomes as possible, which are both complete and contigious.
 
 
 ### Input data ###
@@ -202,10 +203,15 @@ grep "egapxtmp_007423-R1_arctic_grayling" *.gff > check_all_species_test_candida
 
 What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout, cut-throat, cogo, and chum salmon, we see an alignment rate of ~17, but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
 
-Now you have identified a potential PAV!
+### Step 3: Further Validation###
+
+1. Reciprocal blast
+2. OrthoFinder group membership
+3. Synteny
+
 
 ## Caveats ##
 
-
+Gaps or errors in assembly could present as gene PAVs. Here, this was controlled by ensuring all assemblies used were complete (95% complete). Further, all potential PAVs are checked to make sure coordinates would not fall into a gap region (when assessing where that gene might align in your other genomes). This is also controlled by verifying the gene exists in other graylings. If a gene exists in all 3 graylings, but not in other salmonids, there is stronger support for it being a PAV, and not an assembly or annotation artefact. 
 
 
