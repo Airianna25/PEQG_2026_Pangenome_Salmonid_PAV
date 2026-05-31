@@ -14,7 +14,7 @@ If you want to do this on your own data you would need:
 
 1. Protien files (.faa, .pep) for all of your indviduals - generated from annotation
 2. Assemblies for each (.fasta)
-3. A database created from the protiens (.dmnd) which I'll describe how to create
+3. A database created from the protiens (.dmnd) [Database Creation ](#Assess Sequence Similarity)
 4. An OrthoFinder run
 5. A functional annotation 
 
@@ -215,7 +215,7 @@ grep "egapxtmp_007423-R1_arctic_grayling" *.gff > check_all_species_test_candida
 
 What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout, cut-throat, cogo, and chum salmon, we see an alignment rate of ~17, but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
 
-### Step 5: Evaluate gene function ###
+### Step 3: Evaluate gene function ###
 
 Lets check this gene function in our EnTAP functional annotation
 
@@ -227,7 +227,7 @@ This is putatively annotated as a lipid binding gene. However, it doesn't have a
 
 ![annotation_results](https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/annotation_results.png)
 
-### Step 4: Further Validation###
+### Step 4: Further Validatio n###
 
 1. Reciprocal blast
 2. OrthoFinder group membership
