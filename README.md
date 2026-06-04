@@ -8,7 +8,7 @@ Salmonids are a highly diverse group of long-lived, coldwater fishes with diverg
 1. What gene PAVs do graylings possess (Arctic grayling, Amur grayling, european grayling) in comparison to a subset of the salmonid family?
 2. What might these PAVs tell us about their unique life history strategies, or the unique environments they inhabit?
 
-Most pangenome tools (Minigraph cactus, PGGB, PanTools) are designed for constructing pangenomes either witin species, or genus. While progressive cactus is designed for more broad comparisons (potentially at the family level) extensive divergence and distance can across individuals included in the pangenome can lead to issues during the alignment stage. To approach this, I took a gene family based approach followed by further alignment methods for PAV identfication. This involves a quick BLAST/diamond run to understand sequence similarity, and then a protien to genome alignment (miniprot) to check if genes with low sequence similarity might exist in your other genomes. Finally, they are used in conjunction with OrthoFinder and synteny analysis for further validation. 
+Most pangenome tools (Minigraph cactus, PGGB, PanTools) are designed for constructing pangenomes either witin species, or genus. While progressive cactus is designed for more broad comparisons (potentially at the family level) extensive divergence and distance can across individuals included in the pangenome can lead to issues during the alignment stage. To approach this, I took a pseudo-pangenome gene family based approach followed by further alignment methods for PAV identfication. This involves a quick BLAST/diamond run to understand sequence similarity, and then a protien to genome alignment (miniprot) to check if genes with low sequence similarity might exist in your other genomes. Finally, they are used in conjunction with OrthoFinder and synteny analysis for further validation. 
 
 If you want to do this on your own data you would need:
 
@@ -35,7 +35,7 @@ Before I searched for PAVs I:
 
 Before OrthoFinder and PAV analysis, the longest isoform was obtained for each gene. This means there is 1 representive protien for each gene in the analysis. See this script: https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/pull_longest_isoform.sh 
 
-2. Functionally annotated all genomes to understand gene functions 
+2. Functionally annotated all genomes to understand gene functions of candidates.
 
  
 ### Input data ###
@@ -213,7 +213,7 @@ grep "egapxtmp_007423-R1_arctic_grayling" *.gff > check_all_species_test_candida
 ```
 [Checking results output] (https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/check_all_alns.gff)
 
-What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout, cut-throat, cogo, and chum salmon, we see an alignment rate of ~17, but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
+What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout, cut-throat, cogo, and chum salmon, we see an alignment rate of ~17%, but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
 
 ### Step 3: Evaluate gene function ###
 
@@ -230,22 +230,65 @@ This is putatively annotated as a lipid binding gene. However, it doesn't have a
 ### Step 4: Further Validation ###
 
 1. Reciprocal blast
-2. OrthoFinder group membership
-3. Synteny
+
+To further check the alignment or lack there of we can do a reciprocal blast by setting the percent query and subect coverage. If we require a certain percentage of alignmnet on each side and still get no alignment of the PAV candidates (in this case present in graylings and absent in other salmonids. Here, I required 90% query coverage and 70% subject coverage.
+
+```
+diamond blastp \
+    -q peqg_candidates.pep \
+    -d non_grayling_salmonids.dmnd \
+    -o test_reciprocal.txt \
+    -e 1e-10 \
+    --more-sensitive \
+    --query-cover 90 \
+    --subject-cover 70 \
+    --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue
+```
+Still, there are no alignments of this candidate to any other salmonids apart from graylings.
+  
+3. OrthoFinder
+
+We can also check if candidate PAV genes exist in unique orthogroups without orthology to other non-grayling salmonids. If there are no orthologs in any other genomes, it can strengthen the support for labeling a gene as PAV. Here, we see that the candidate is in a grayling-specific orthogroup (OG0022645):
+
+```
+OG0022645
+
+Arctic grayling
+egapxtmp_007423-R1_arctic_grayling
+European grayling
+egapxtmp_001431-R1_european_grayling
+egapxtmp_003525-R1_european_grayling
+egapxtmp_012544-R1_european_grayling
+egapxtmp_013733-R1_european_grayling
+egapxtmp_014791-R1_european_grayling
+egapxtmp_042775-R1_european_grayling
+```
+
+4. Synteny
 
 
 ### Step 5: Further analysis with identified PAVs ###
 
+1. If you were to identify several PAVs in your species of interest, you could do an a functional enrichment analysis to understand which functions the PAV candidates are enriched for.
+2. If you are assessing PAVs in a population context, you could perform a GWAS with the PAV candidates to understand the associations between the PAVs and certain characteristics / phenotypes. See this paper for more details: https://royalsocietypublishing.org/rsob/article/15/5/240382/235737
+
+
 ## Power of this approach compared to other methods ##
 
-The use of BLAST, reciprocal blast searches, protien to genome alignment, OrthoFinder, and synteny in combination with eachother will all provide further support for PAVs. This is a pseudo-pangenome approach for species with a wide evolutionary distance, that might not work well with typical pangenome tools. Ideally, these analyses should be used together to validate candidates in the absence of a typical pangenome
-graph. BLAST and protien to genome alignment will give you information about sequence similarity and potentially diverged copies that could look like PAV at a glance, while following up with OrthoFinder will give insight into orthologous and paralogous relationships. Looking at the syntney of these PAV regions across your genomes can provide resolution on potential translocation events, gaps, relationships of orthologous regions, all which can interfere with intepretation of PAVs. 
+- The use of BLAST, reciprocal blast searches, protien to genome alignment, OrthoFinder, and synteny in combination with eachother will all provide further support for PAVs. 
+- This is a pseudo-pangenome approach for species with a wide evolutionary distance, that might not work well with typical pangenome tools. Ideally, these analyses should be used together to validate candidates in the absence of a typical pangenome
+graph.
+- BLAST and protien to genome alignment will give you information about sequence similarity and potentially diverged copies that could look like PAV at a glance, while following up with OrthoFinder will give insight into orthologous and paralogous relationships.
+- Looking at the syntney of these PAV regions across your genomes can provide resolution on potential translocation events, gaps, relationships of orthologous regions, all which can interfere with intepretation of PAVs. 
 
 In salmonids, differential retention of duplicated genes (ohnologs) can appear to be PAV, especially given the salmonid-specific whole genome duplication event. Therefore, it's important to cross-check candidates with several methods.
 
 
 ## Caveats ##
 
-Gaps or errors in assembly could present as gene PAVs. Here, this was controlled by ensuring all assemblies used were complete (95% complete). Further, all potential PAVs are checked to make sure coordinates would not fall into a gap region (when assessing where that gene might align in your other genomes). This is also controlled by verifying the gene exists in other graylings. If a gene exists in all 3 graylings, but not in other salmonids, there is stronger support for it being a PAV, and not an assembly or annotation artefact. Lastly, a consistent annotation method for all can help reduce false positives. 
+- Gaps or errors in assembly could present as gene PAVs. Here, this was controlled by ensuring all assemblies used were complete (95% complete).
+- Further, all potential PAVs are checked to make sure coordinates would not fall into a gap region (when assessing where that gene might align in your other genomes). 
+- This is also controlled by verifying the gene exists in other graylings. If a gene exists in all 3 graylings, but not in other salmonids, there is stronger support for it being a PAV, and not an assembly or annotation artefact. 
+- Lastly, a consistent annotation method for all can help reduce false positives. 
 
 
