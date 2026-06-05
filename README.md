@@ -137,7 +137,7 @@ seqkit grep -f grayling_nohit_genes.txt  grayling_all_query.pep > best_candidate
 Now you have genes for miniprot - the next section!
 
 
-### Step 2: Protien to Genome Alignmnet ###
+### Step 2: Protien to Genome Alignment ###
 
 We need to align our ```best_candidate_pav_genes.pep``` file to all of our salmonid genomes. Even if they didn't align, we still need to check with a protein to genome alignment. We will do this against all other salmonids, and the input set to compare grayling vs. grayling alignments. Specifically, I was interested to see if there were any genes present all graylings (Arctic, European, and Amur) but not in the other salmonids.
 
