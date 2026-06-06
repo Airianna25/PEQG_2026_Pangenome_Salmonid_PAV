@@ -57,7 +57,7 @@ I have uploaded all the protien files, and assemblies here for use. Here are the
 14. Chum salmon (*Oncorhynchus keta*)
 15. Pink salmon (*Onchorhynchus gorbsucha*)
 
-
+Note! Access all input proteins here: https://drive.google.com/drive/folders/1WQe-cCXSp-jpg7JMVtjSd6xbXhEn3FQD?dmr=1&ec=wgc-drive-globalnav-goto
 
 ### Required Software ###
 
@@ -141,22 +141,24 @@ Now you have genes for miniprot - the next section!
 
 We need to align our ```best_candidate_pav_genes.pep``` file to all of our salmonid genomes. Even if they didn't align, we still need to check with a protein to genome alignment. We will do this against all other salmonids, and the input set to compare grayling vs. grayling alignments. Specifically, I was interested to see if there were any genes present all graylings (Arctic, European, and Amur) but not in the other salmonids.
 
+Note: for the purposes in the tutorial I only provided the coho salmon assembly and the european grayling since they are large. Here are those assemblies: https://drive.google.com/drive/folders/1eRqdiBFI43AvZ9TgX8ogBFrosk6Gz4j8?dmr=1&ec=wgc-drive-globalnav-goto 
+
 ```
-atlantic_salmon=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/atlantic_salmon/atlantic_salmon_29chrs_renamed.fasta
-euro_grayling=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/european_grayling/european_grayling_chrs_renamed.fasta
-arctic_grayling=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/repeats/repeatmasker_out/hap1_male_hifiasm_haphic_masked_renamed.fasta
-amur_grayling=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/synteny/grayling_genus_synteny/genomes/amur_grayling_46chrs_renamed.fasta
-arctic_char=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/arctic_char/arctic_char_39_chrs_renamed.fasta
-chum_salmon=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/chum_salmon/chum_salmon_37chr_renamed.fasta
-lake_trout=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/lake_trout/lake_trout_42_chroms_renamed.fasta
-pink_salmon=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/pink_salmon/pink_salmon_27_chrs_renamed.fasta
-rainbow_trout=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/rainbow_trout/rainbow_trout_33chr_renamed.fasta
-sockeye_salmon=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/sockeye_salmon/sockeye_salmon_chroms_only_renamed.fasta
-brook_trout=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/brook_trout/brook_trout_42_chrs_renamed.fasta
-cutthroat_trout=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/cutthroat_trout/cutthroat_trout_33chrs_renamed.fasta
-coregonus=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/coregonus_artedi/coregonus_artedi_chrs_renamed.fasta
-coho_salmon=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/coho_salmon/coho_salmon_30_chrs_renamed.fasta
-chinook_salmon=/core/projects/EBP/Wegrzyn/EVOME/thymallus_arcticus/02_Analysis/compare_genomes/chinook_salmon/chinook_34_chrs_renamed.fasta
+atlantic_salmon=atlantic_salmon_29chrs_renamed.fasta
+euro_grayling=european_grayling_chrs_renamed.fasta
+arctic_grayling=hap1_male_hifiasm_haphic_masked_renamed.fasta
+amur_grayling=amur_grayling_46chrs_renamed.fasta
+arctic_char=arctic_char_39_chrs_renamed.fasta
+chum_salmon=chum_salmon_37chr_renamed.fasta
+lake_trout=lake_trout_42_chroms_renamed.fasta
+pink_salmon=pink_salmon_27_chrs_renamed.fasta
+rainbow_trout=rainbow_trout_33chr_renamed.fasta
+sockeye_salmon=sockeye_salmon_chroms_only_renamed.fasta
+brook_trout=brook_trout_42_chrs_renamed.fasta
+cutthroat_trout=cutthroat_trout_33chrs_renamed.fasta
+coregonus=coregonus_artedi_chrs_renamed.fasta
+coho_salmon=coho_salmon_30_chrs_renamed.fasta
+chinook_salmon=chinook_34_chrs_renamed.fasta
 
 
 miniprot -t8 --gff $atlantic_salmon best_candidate_pav_genes.pep > atlantic_grayling_pav_validation.gff
@@ -217,7 +219,7 @@ What we see, is that we have very high quality alignmnets to the arctic grayling
 
 ### Step 3: Evaluate gene function ###
 
-Lets check this gene function in our EnTAP functional annotation
+Lets check this gene function in our EnTAP functional annotation (access it here: https://drive.google.com/drive/folders/12nhWP0UcbIulYYfmcDXf_9WX_lu0vlxg?dmr=1&ec=wgc-drive-globalnav-goto)
 
 ```
 grep "egapxtmp_007423-R1_arctic_grayling" > ag_entap_results.tsv
@@ -231,7 +233,7 @@ This is putatively annotated as a lipid binding gene. However, it doesn't have a
 
 1. Reciprocal blast
 
-To further check the alignment or lack there of we can do a reciprocal blast by setting the percent query and subect coverage. If we require a certain percentage of alignmnet on each side and still get no alignment of the PAV candidates (in this case present in graylings and absent in other salmonids. Here, I required 90% query coverage and 70% subject coverage.
+To further check the alignment or lack there of we can do a reciprocal blast by setting the percent query and subect coverage. If we require a certain percentage of alignmnet on each side and still get no alignment of the PAV candidates (in this case present in graylings and absent in other salmonids. Here, I required 70% query coverage and 70% subject coverage.
 
 ```
 diamond blastp \
@@ -240,7 +242,7 @@ diamond blastp \
     -o test_reciprocal.txt \
     -e 1e-10 \
     --more-sensitive \
-    --query-cover 90 \
+    --query-cover 70 \
     --subject-cover 70 \
     --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue
 ```
