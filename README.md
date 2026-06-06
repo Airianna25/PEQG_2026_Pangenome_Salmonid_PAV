@@ -137,7 +137,7 @@ seqkit grep -f grayling_nohit_genes.txt  grayling_all_query.pep > best_candidate
 Now you have genes for miniprot - the next section!
 
 
-### Step 2: Protien to Genome Alignment ###
+### Step 2: Protein to Genome Alignment ###
 
 We need to align our ```best_candidate_pav_genes.pep``` file to all of our salmonid genomes. Even if they didn't align, we still need to check with a protein to genome alignment. We will do this against all other salmonids, and the input set to compare grayling vs. grayling alignments. Specifically, I was interested to see if there were any genes present all graylings (Arctic, European, and Amur) but not in the other salmonids.
 
@@ -213,7 +213,7 @@ grep "egapxtmp_007423-R1_arctic_grayling" *.gff > check_all_species_test_candida
 ```
 [Checking results output] (https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/check_all_alns.gff)
 
-What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout, cut-throat, cogo, and chum salmon, we see an alignment rate of ~17%, but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
+What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout, cutthroat trout, coho salmon, and chum salmon, we see an alignment rate of ~17%, but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
 
 ### Step 3: Evaluate gene function ###
 
