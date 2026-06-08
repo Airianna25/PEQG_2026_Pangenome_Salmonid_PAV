@@ -268,6 +268,7 @@ egapxtmp_042775-R1_european_grayling
 
 4. Synteny
 
+Finally, to confirm the variants, you could use a protein level synteny tool such as GENESPACE (https://github.com/jtlovell/GENESPACE) if you want to see if your PAV regions might be syntenic to regions in your other genomes. 
 
 ### Step 5: Further analysis with identified PAVs ###
 
