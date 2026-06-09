@@ -1,4 +1,4 @@
-# PEQG 2026 Pangenome Salmonid Pseudo-pangenome PAV Identification Tutorial
+# PEQG 2026 - Salmonid Pseudo-pangenome PAV Identification Tutorial
 This is a quick tutorial on finding gene presence absence variants (PAV) in family level analysis with alignment methods (BLAST and miniprot). 
 
 ## Introduction ##
