@@ -128,7 +128,7 @@ cut -f1 all_grayling_against_salmonid_pangenome.txt | sort | uniq > blast_query_
 comm -23 all_grayling_ids.txt blast_query_ids.txt > grayling_nohit_genes.txt
 ```
 The last line will output a file that contains the genes that are in the original search set, but not in the BLAST results, meaning they didn't align. 
-The output is just a list of genes, so I won't show it, but there are 377. These are our putative gene candidates. Next, we will pull these gene IDs from our origianal protein file to have a new, candidate gene protien set. 
+The output is just a list of genes, so I won't show it, but there are 377. These are our putative gene candidates. Next, we will pull these gene IDs from our original protein file to have a new, candidate gene protien set. 
 
 ```
 seqkit grep -f grayling_nohit_genes.txt  grayling_all_query.pep > best_candidate_pav_genes.pep 
@@ -197,7 +197,7 @@ awk -F'\t' '$3=="mRNA" {
     match($9,/Identity=([0-9.]+)/,a)
     match($9,/Target=([^ ]+)/,b)
     print a[1] "\t" b[1]
-}' all_species_miniprot_hits.gff  | sort -g -k1,1 | head -20 > lowest_alns_pav.gff
+}' all_species_miniprot_hits.gff  | sort -g -k1,1 | head -20 > lowest_alns_pav.txt
 
 ```
 
@@ -215,7 +215,7 @@ grep "egapxtmp_007423-R1_arctic_grayling" *.gff > check_all_species_test_candida
 ```
 [Checking results output](https://github.com/Airianna25/PEQG_2026_Pangenome_Salmonid_PAV/blob/main/check_all_alns.gff)
 
-What we see, is that we have very high quality alignmnets to the arctic grayling (as expected!), european grayling, and the amur grayling. In both the rainbow trout, cutthroat trout, coho salmon, and chum salmon, we see an alignment rate of ~17%, but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
+What we see, is that we have very high quality alignments to the european grayling, and the amur grayling as hoped. In both the rainbow trout, cutthroat trout, coho salmon, and chum salmon, we see an alignment rate of ~17% (and sometimes a bit higher), but no alignments whatsoever to other species. This could indicate that it's uniquely present in graylings. 
 
 ### Step 3: Evaluate gene function ###
 
